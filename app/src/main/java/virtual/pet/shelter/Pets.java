@@ -6,6 +6,7 @@ public class Pets {
     int thirst = 100;
     int hunger = 100;
     int boredom = 100;
+    double cage = 10.0;
 
 
     public Pets(String name, String description) {
@@ -14,6 +15,7 @@ public class Pets {
         this.thirst = 100;
         this.hunger = 100;
         this.boredom = 100;
+        this.cage = 10.0;
     }
 
 
@@ -64,6 +66,16 @@ public class Pets {
 
     public void setBoredom(int boredom) {
         this.boredom = boredom;
+    }
+
+
+    public double getCage() {
+        return cage;
+    }
+
+
+    public void setCage(double cage) {
+        this.cage = cage;
     }
 
 }

@@ -73,12 +73,12 @@ class AppTest {
     }
 
     @Test
-    void testCageCleanliness() {
+    void testKennelCleanliness() {
 
     }
 
     @Test
-    void testCleanCage() {
+    void testCleanKennel() {
 
     }
 }
