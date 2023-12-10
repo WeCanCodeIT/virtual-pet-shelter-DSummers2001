@@ -7,5 +7,63 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    
+    @Test
+    void testPetName() {
+
+    }
+
+    @Test
+    void testPetDescription() {
+
+    }
+
+    @Test
+    void testPetAttributes() {
+
+    }
+
+    @Test
+    void testPetHealthTick() {
+
+    }
+
+    @Test
+    void testAllPetsInShelter() {
+
+    }
+
+    @Test
+    void testIntakePet() {
+
+    }
+
+    @Test
+    void testAdoption() {
+
+    }
+
+    @Test
+    void testFeedPets() {
+
+    }
+
+    @Test
+    void testWaterPets() {
+
+    }
+
+    @Test
+    void testPlayPet() {
+        
+    }
+
+    @Test
+    void testCageCleanliness() {
+
+    }
+
+    @Test
+    void testCleanCage() {
+
+    }
 }
