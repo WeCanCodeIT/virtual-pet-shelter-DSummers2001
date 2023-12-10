@@ -9,17 +9,32 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
     @Test
     void testPetName() {
-
+        Pets wolf = new Pets("Wolfy", "Sleek white fur with beautiful blue eyes");
+        assertEquals("Wolfy", wolf.getName());
     }
 
     @Test
     void testPetDescription() {
-
+        Pets wolf = new Pets("Wolfy", "Sleek white fur with beautiful blue eyes");
+        assertEquals("Sleek white fur with beautiful blue eyes", wolf.getDescription());
     }
 
     @Test
-    void testPetAttributes() {
+    void testPetThirst() {
+        Pets Hunter = new Pets("Dobby", "Jet black fur with beady brown eyes");
+        assertEquals(100, Hunter.getThirst());
+    }
 
+    @Test
+    void testPetHunger() {
+        Pets Bull = new Pets("Bully", "Muscular bull dog with a beige coat");
+        assertEquals(100, Bull.getHunger());
+    }
+
+    @Test
+    void testPetBoredom() {
+        Pets rex = new Pets("Rexy", "Cute dalmatian with brown eyes");
+        assertEquals(100, rex.getBoredom());
     }
 
     @Test
