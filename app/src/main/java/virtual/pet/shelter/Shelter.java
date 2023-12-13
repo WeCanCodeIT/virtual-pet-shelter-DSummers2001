@@ -7,16 +7,19 @@ public class Shelter {
     // create a map
     private Map<Integer, Pets> petsIn = new HashMap<>();
     private Map<Integer, Pets> adoptedPets = new HashMap<>();
+
     // take in a pet
     public void intakePet(int kennelNum, String name, String description) {
         Pets newPetIn = new Pets(name, description);
         petsIn.put(kennelNum, newPetIn);
     }
+
     // adopt a pet
     public void petAdoption(int kennelNum){
         adoptedPets.put(kennelNum, petsIn.get(kennelNum));
         petsIn.remove(kennelNum);
     }
+
     // cage cleanliness
     public void cleanKennel(){
         for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {
@@ -45,7 +48,10 @@ public class Shelter {
             System.out.println("Thirst: " + pet.getThirst() + " Hunger: " + pet.getHunger() + " Boredom: " + pet.getBoredom() + "\n");
         }
     }
+    
     // select a certain pet
-    // display selected pets information
+    public Pets selectedPet(int kennelNum){
+        return petsIn.get(kennelNum);
+    }
 
 }
