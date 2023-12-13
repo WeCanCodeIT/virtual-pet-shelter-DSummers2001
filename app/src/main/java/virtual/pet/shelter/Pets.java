@@ -104,9 +104,9 @@ public class Pets {
 
     public void selfPreservation(){
         if ((this.hunger <= 10) && (this.hunger <= this.thirst)){
-            this.hunger += 5;
+            this.hunger += 10;
         } else {
-            this.thirst += 5;
+            this.thirst += 10;
         }
     }
 

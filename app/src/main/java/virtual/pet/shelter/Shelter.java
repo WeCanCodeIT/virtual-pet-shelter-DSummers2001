@@ -20,20 +20,41 @@ public class Shelter {
         petsIn.remove(kennelNum);
     }
 
+    public void feedPets(){
+        for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {
+            Pets pet = entry.getValue();
+            pet.changeHunger(+10);
+        }
+    }
+
+    public void waterPets(){
+        for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {
+            Pets pet = entry.getValue();
+            pet.changeThirst(+10);
+        }
+    }
+
+    public void tickPets(){
+        for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {
+            Pets pet = entry.getValue();
+            pet.tick();
+        }
+    }
+
+    public void selfPreservation(){
+        for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {
+            Pets pet = entry.getValue();
+            pet.selfPreservation();
+        }
+    }
+
     // cage cleanliness
     public void cleanKennel(){
         for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {
-            int key = entry.getKey();
             Pets pet = entry.getValue();
-
-            if (pet.getCage() < 10.0){
-                System.out.println("You cleaned kennel number: " + key);
-                pet.changeCage(+4.0);
-            } else {
-                System.out.println(key + " is already clean");
+            pet.changeCage(+4.0);
             }
         }
-    }
     
     // display all pets in the shelter
     public void shelterPets(){
