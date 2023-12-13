@@ -48,7 +48,7 @@ public class App {
                     System.exit(select);
                     break;
                 default:
-                System.out.println("Invalid input enter a number 1-6");
+                System.out.println("\nInvalid input enter a number 1-6\n");
                     break;
             }
 
@@ -69,10 +69,10 @@ public class App {
     }
 
     public static void intakePet(Scanner scanner, Shelter shelter){
-        System.out.println("Enter Name: ");
+        System.out.print("Enter Name: ");
         String name = scanner.nextLine();
 
-        System.out.println("Enter Description: ");
+        System.out.print("Enter Description: ");
         String description = scanner.nextLine();
 
         System.out.print("Enter kennel number: ");
@@ -94,8 +94,8 @@ public class App {
         int kennelNum = scanner.nextInt();
         shelter.selectedPet(kennelNum);
         Pets pet = shelter.selectedPet(kennelNum);
-        
-        System.out.println("You played with him/her! they are very happy");
+
+        System.out.println("\nYou played with him/her! they are very happy\n");
         pet.changeBoredom(+10);
     }
 
