@@ -6,6 +6,8 @@ package virtual.pet.shelter;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Map;
+
 class AppTest {
     @Test
     void testPetName() {
@@ -39,46 +41,52 @@ class AppTest {
 
     @Test
     void testPetHealthTick() {
-
-    }
-
-    @Test
-    void testAllPetsInShelter() {
-
+        Pets pet = new Pets("Wolfy", "He's a wolf");
+        pet.tick();
+        assertEquals(45, pet.getHunger());
+        assertEquals(45, pet.getThirst());
     }
 
     @Test
     void testIntakePet() {
-
+        Shelter shelter = new Shelter();
+        shelter.intakePet(12, "Wolfy", "A white cat");
+        assertNotNull(shelter);
     }
 
     @Test
     void testAdoption() {
-
+        Shelter shelter = new Shelter();
+        shelter.intakePet(11, "Greg", "Badger");
+        shelter.petAdoption(11);
+        assertEquals(null, shelter.selectedPet(11));
     }
 
     @Test
     void testFeedPets() {
+        Shelter shelter = new Shelter();
+        shelter.intakePet(12, "Billy", "Goat");
+        shelter.feedPets();
 
+        assertEquals(60, shelter.selectedPet(12).getHunger());
     }
 
     @Test
     void testWaterPets() {
+        Shelter shelter = new Shelter();
+        shelter.intakePet(12, "Billy", "Goat");
+        shelter.waterPets();
 
+        assertEquals(60, shelter.selectedPet(12).getThirst());
     }
 
     @Test
     void testPlayPet() {
-        
+        Shelter shelter = new Shelter();
+        shelter.intakePet(45, "Guss", "Grizly");
+        shelter.selectedPet(45).changeBoredom(+10);
+
+        assertEquals(60, shelter.selectedPet(45).getBoredom());
     }
 
-    @Test
-    void testKennelCleanliness() {
-
-    }
-
-    @Test
-    void testCleanKennel() {
-
-    }
 }
