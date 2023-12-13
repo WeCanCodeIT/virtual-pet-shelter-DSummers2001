@@ -94,13 +94,9 @@ public class App {
         int kennelNum = scanner.nextInt();
         shelter.selectedPet(kennelNum);
         Pets pet = shelter.selectedPet(kennelNum);
-
-        System.out.println("Press 8 to play with the pet");
-        int selection = scanner.nextInt();
-        if (selection == 8){
-            System.out.println("You played with him/her! they are very happy");
-            pet.changeBoredom(+10);
-        }
+        
+        System.out.println("You played with him/her! they are very happy");
+        pet.changeBoredom(+10);
     }
 
 }
