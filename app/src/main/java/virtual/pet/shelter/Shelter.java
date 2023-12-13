@@ -74,7 +74,7 @@ public class Shelter {
             int key = entry.getKey();
             Pets pet = entry.getValue();
 
-            System.out.println("Kennel number: " + key + "/" + pet.getName() + " " + pet.getDescription());
+            System.out.println("Kennel number: " + key + " " + pet.getName() + " - " + pet.getDescription());
         }
     }
     
