@@ -48,6 +48,18 @@ public class Shelter {
         }
     }
 
+    public void petDeath(){
+        for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()){
+            int key = entry.getKey();
+            Pets pet = entry.getValue();
+
+            if (pet.getHunger() < 0 || pet.getThirst() < 0){
+                System.out.println("A pet has died");
+                petsIn.remove(key);
+            }
+        }
+    }
+
     // cage cleanliness
     public void cleanKennel(){
         for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {

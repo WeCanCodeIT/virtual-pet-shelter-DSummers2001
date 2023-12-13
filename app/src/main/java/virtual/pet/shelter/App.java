@@ -15,7 +15,8 @@ public class App {
             menu();
             select = userInput.nextInt();
             userInput.nextLine();
-            
+
+            shelter.petDeath();
             shelter.selfPreservation();
             
             switch (select) {
