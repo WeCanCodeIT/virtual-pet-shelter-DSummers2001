@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) {
         int select;
         Scanner userInput = new Scanner(System.in);
-        System.out.println("We welcome you to our pet shelter and look forward to working with you!");
+        System.out.println("Welcome to my pet shelter and i look forward to working with you!");
         Shelter shelter = new Shelter();
 
         do {
@@ -58,7 +58,7 @@ public class App {
     }
 
     public static void menu(){
-        System.out.println("What would you like to do!");
+        System.out.println("What would you like to do!\n");
         System.out.println("[0] Intake a new pet");
         System.out.println("[1] Give a pet up for adoption");
         System.out.println("[2] Feed all pets");
@@ -90,7 +90,8 @@ public class App {
     }
 
     public static void selectPet(Scanner scanner, Shelter shelter){
-        System.out.print("Enter kennel number to select a pet: ");
+        shelter.petNameDescription();
+        System.out.print("Enter kennel number to play with a pet: ");
         int kennelNum = scanner.nextInt();
         shelter.selectedPet(kennelNum);
         Pets pet = shelter.selectedPet(kennelNum);

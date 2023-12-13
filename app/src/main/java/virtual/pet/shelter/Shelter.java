@@ -68,17 +68,27 @@ public class Shelter {
             }
         }
     
+    // display pet names with descriptions only
+    public void petNameDescription(){
+        for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()){
+            int key = entry.getKey();
+            Pets pet = entry.getValue();
+
+            System.out.println("Kennel number: " + key + " Name: " + pet.getName() + " Description: " + pet.getDescription());
+        }
+    }
+    
     // display all pets in the shelter
     public void shelterPets(){
         if (!petsIn.isEmpty()){
-            System.out.println("Pets in the shelter with kennel number");
+            System.out.println("Status of pets in the shelter:\n");
         }
         for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()){
             int key = entry.getKey();
             Pets pet = entry.getValue();
 
-            System.out.println("Kennel number: " + key + " Name: " + pet.getName() + " Description: " + pet.getDescription() + " Kennel cleanliness: " + pet.getCage());
-            System.out.println("Thirst: " + pet.getThirst() + " Hunger: " + pet.getHunger() + " Boredom: " + pet.getBoredom() + "\n");
+            System.out.println("Kennel number: " + key + " Name: " + pet.getName() + " Description: " + pet.getDescription());
+            System.out.println("Thirst: " + pet.getThirst() + " Hunger: " + pet.getHunger() + " Boredom: " + pet.getBoredom() + " Kennel cleanliness: " + pet.getCage() + "\n");
         }
     }
 
