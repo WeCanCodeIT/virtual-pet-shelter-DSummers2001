@@ -98,7 +98,7 @@ public class Pets {
     public void tick(){
         this.hunger -= 5;
         this.thirst -= 5;
-        this.boredom -= 5;
+        this.boredom -= 2;
         this.cage -= 0.5;
     }
 

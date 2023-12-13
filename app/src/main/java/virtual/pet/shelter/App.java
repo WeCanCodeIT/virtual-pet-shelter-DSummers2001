@@ -37,6 +37,7 @@ public class App {
                     shelter.tickPets();
                     break;
                 case 4:
+                    selectPet(userInput, shelter);
                     shelter.tickPets();
                     break;
                 case 5:
@@ -74,7 +75,7 @@ public class App {
         System.out.println("Enter Description: ");
         String description = scanner.nextLine();
 
-        System.out.println("Enter kennel number: ");
+        System.out.print("Enter kennel number: ");
         int kennelNum = scanner.nextInt();
         scanner.nextLine();
 
@@ -82,10 +83,24 @@ public class App {
     }
 
     public static void petAdoption(Shelter shelter, Scanner scanner){
-        System.out.println("Enter kennel number: ");
+        System.out.print("Enter kennel number: ");
         int kennelNum = scanner.nextInt();
         scanner.nextLine();
         shelter.petAdoption(kennelNum);
+    }
+
+    public static void selectPet(Scanner scanner, Shelter shelter){
+        System.out.print("Enter kennel number to select a pet: ");
+        int kennelNum = scanner.nextInt();
+        shelter.selectedPet(kennelNum);
+        Pets pet = shelter.selectedPet(kennelNum);
+
+        System.out.println("Press 8 to play with the pet");
+        int selection = scanner.nextInt();
+        if (selection == 8){
+            System.out.println("You played with him/her! they are very happy");
+            pet.changeBoredom(+10);
+        }
     }
 
 }

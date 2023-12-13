@@ -64,7 +64,7 @@ public class Shelter {
     public void cleanKennel(){
         for (Map.Entry<Integer, Pets> entry : petsIn.entrySet()) {
             Pets pet = entry.getValue();
-            pet.changeCage(+4.0);
+            pet.changeCage(+5.0);
             }
         }
     
