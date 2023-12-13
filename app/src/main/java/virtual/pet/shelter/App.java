@@ -13,6 +13,7 @@ public class App {
         Pets pet = new Pets(petName, petDescription);
 
         do {
+            shelter.shelterPets();
             System.out.println("What would you like to do!");
             System.out.println("[0] Intake a new pet");
             System.out.println("[1] Give a pet up for adoption");
@@ -40,18 +41,16 @@ public class App {
                     petAdoption(shelter, userInput);
                     break;
                 case 2:
-                    pet.changeHunger(+10);
+                    
                     break;
                 case 3:
-                    pet.changeThirst(+10);
+                    
                     break;
                 case 4:
-                    shelter.selectedPet(select);
-                    pet.changeBoredom(+10);
-                    showPetsCurrentNeeds(pet);
+                    
                     break;
                 case 5:
-                    shelter.cleanKennel();
+                    
                     break;
                 case 6:
                     System.exit(select);
@@ -61,17 +60,9 @@ public class App {
                     break;
             }
 
-            pet.tick();
         } while (select != 6);
 
         userInput.close();
-    }
-
-    private static void showPetsCurrentNeeds(Pets pet){
-        System.out.println("Hunger: " + pet.getHunger());
-        System.out.println("Thirst: " + pet.getThirst());
-        System.out.println("Boredom: " + pet.getBoredom());
-        System.out.println("Kennel Cleanliness: " + pet.getCage());
     }
 
     public static void intakePet(Scanner scanner, Shelter shelter){

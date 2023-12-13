@@ -48,10 +48,11 @@ public class Shelter {
             System.out.println("Thirst: " + pet.getThirst() + " Hunger: " + pet.getHunger() + " Boredom: " + pet.getBoredom() + "\n");
         }
     }
-    
+
     // select a certain pet
     public Pets selectedPet(int kennelNum){
         return petsIn.get(kennelNum);
     }
+
 
 }
