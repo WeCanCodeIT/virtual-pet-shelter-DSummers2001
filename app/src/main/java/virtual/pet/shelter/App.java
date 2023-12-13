@@ -91,7 +91,7 @@ public class App {
 
     public static void selectPet(Scanner scanner, Shelter shelter){
         shelter.petNameDescription();
-        System.out.print("Enter kennel number to play with a pet: ");
+        System.out.print("\nEnter kennel number to play with a pet: ");
         int kennelNum = scanner.nextInt();
         shelter.selectedPet(kennelNum);
         Pets pet = shelter.selectedPet(kennelNum);
